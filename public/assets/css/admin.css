@@ -1,0 +1,128 @@
+/* Général*/
+
+body {
+    background-color: #bdbdbd;
+    list-style-type: none;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+#sidenav-overlay {
+    display: none!important;
+}
+
+.button-collapse {
+    background-color: blue!important;
+}
+
+.titreAdmin {
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 1px 1px black;
+}
+
+
+/* Login */
+
+#titreLogin {
+    color: grey;
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 1px 1px black;
+}
+
+
+/* SideNav Admin */
+
+#sideNavAdmin {
+    position: absolute;
+}
+
+#titrePanneau {
+    color: #D9009F;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#question {
+    font-size: 17px;
+}
+
+.userView {
+    padding: 5% 10% 10% 10%!important;
+}
+
+.itemSideNavAdmin {
+    padding: 0 0 5% 15%!important;
+}
+
+
+/* Accueil */
+
+#panel {
+    background: url('../../assets/img/headerpanel.jpg') !important;
+}
+
+.circle {
+    height: 15%;
+    display: block;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+}
+
+.firstrow {
+    background-color: black;
+    background-size: cover;
+    height: 245px;
+}
+
+.boxpanel {
+    color: #FFDBFA;
+    font-family: "Raleway";
+    font-size: 45px;
+    font-weight: bolder;
+}
+
+.secondrow {
+    background-color: black;
+    background-size: cover;
+    height: 245px;
+}
+
+.boxpanel2 {
+    color: #FFDBFA;
+    font-family: "Raleway";
+    font-size: 55px;
+    font-weight: bolder;
+}
+
+
+/* Actualités */
+
+.boutonAdmin {
+    color: white;
+    height: 35px;
+    width: 250px!important;
+}
+
+.boutonAdd {
+    background-color: blue;
+    color: white;
+    margin-right: 20px;
+    height: 40px;
+}
+
+.browser-default {
+    background-color: white;
+    height: 40px;
+    width: 250px!important;
+}
+
+@media only screen and (min-width: 993px) .row .col.l2 {
+    margin-left: 0;
+}

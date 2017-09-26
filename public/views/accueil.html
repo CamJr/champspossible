@@ -1,0 +1,253 @@
+<!-- Bannière -->
+<div class="center navTitle">
+  Venez innover et expérimenter au campus Les Champs du Possible !
+</div>
+<div class="slider">
+  <slick settings="vm.slickConfig">
+    <div class="repeat" ng-repeat="home in vm.homes | orderBy:'ordre' ">
+      <a href="{{home.lienClick}}" target="_blank">
+                    <img ng-src='{{home.lienImg}}' />
+                </a>
+    </div>
+  </slick>
+</div>
+
+<!--Choix d'un profil  -->
+<div class="listprofile">
+  <div class="col s12 m12 l12">
+    <div id="choixProfil">Consultez nos offres en fonction de votre profil.
+      <div class="row">
+
+
+
+
+        <a href="#!/offres/Entreprise">
+          <div class="col s12 m6 l3">
+            <div class="card-panel center profilSquare">
+              <i class="fa fa-briefcase fa-3x pink-text" aria-hidden="true"></i>
+              <div class="card-content">
+                <a href="#!/offres/Entreprise" class="lienOffre">Entreprise</a>
+              </div>
+            </div>
+          </div>
+        </a>
+
+
+        <a href="#!/offres/Startup">
+          <div class="col s12 m6 l3">
+            <div class="card-panel center profilSquare">
+              <i class="fa fa-rocket fa-3x pink-text" aria-hidden="true"></i>
+              <div class="card-content">
+                <a href="#!/offres/Startup" class="lienOffre">StartUp</a>
+              </div>
+            </div>
+          </div>
+        </a>
+
+
+        <a href="#!/offres/Entreprise">
+          <div class="col s12 m6 l3">
+            <div class="card-panel center profilSquare">
+              <i class="fa fa-user fa-3x pink-text" aria-hidden="true"></i>
+              <div class="card-content">
+                <a href="#!/offres/Expert" class="lienOffre">Expert</a>
+              </div>
+            </div>
+          </div>
+        </a>
+
+
+        <a href="#!/offres/Entreprise">
+          <div class="col s12 m6 l3">
+            <div class="card-panel center profilSquare">
+              <i class="fa fa-graduation-cap fa-3x pink-text" aria-hidden="true"></i>
+              <div class="card-content">
+                <a href="#!/offres/Etudiant" class="lienOffre">Étudiant</a>
+              </div>
+            </div>
+          </div>
+        </a>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<!-- <div class="row">
+    <img src="assets/img/baner.png" class="responsive-img">
+  <div class="col s12">
+    <h2 class="center">Campus Champs du Possible</h2>
+    <br>
+    <h3>92 hectares de fermes expérimentale</h3>
+    <h3>Espace de bureau de 600m²</h3>
+    <h3>Farmlab de 230m²</h3>
+    <h3>2 Espace de co-working</h3>
+    <h3>2 espaces évenementielle</h3>
+    <h3>2 salle de reunion</h3>
+    <h3>1 table de ping pong</h3>
+  </div>
+</div> -->
+
+
+<div class="row s12">
+
+  <div class="container">
+
+    <div class="col s6">
+      <h2>Espace Start-Up</h2>
+      <h5>
+         Accédez à un bureau avec un programme d’accompagnement entouré de coach et d'entrepreneurs et des meilleures ressources. </h5>
+      <br>
+      <div class="cardStartUp center">
+        <h1>Par ans</h1>
+        <h1>A partir de 70€</h1>
+      </div>
+      <div class="buttonStartUp center">
+        <a class="white-text" href="https://campuslcdp.typeform.com/to/tiOqc1" type="button" name="button">Rejoignez-nous</a>
+      </div>
+
+    </div>
+    <div class="col s6">
+      <h2>Espace Co-Working</h2>
+      <h5>
+        Accédez de deux Open Space moderne et convivial avec des espaces de travail, des évènnements et des activités à louer au mois !
+    </h5>
+      <br>
+      <div class="cardCoworking center">
+        <h1>Par Mois</h1>
+        <h1>A partir de 40€</h1>
+      </div>
+      <div class="buttonCo center">
+        <a class="white-text" href="https://campuslcdp.typeform.com/to/tiOqc1" type="button" name="button">Rejoignez-nous</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<h1><a class="red-text" href="https://www.youtube.com/channel/UC4xKeJLSjDLDAtW1dNfwwVw?view_as=subscriber" target="_blank"><i class="fa fa-youtube-play fa-1x" aria-hidden="true"></i> Le Youtube du possible</a></h1>
+<div class="row center" id="youtube"></div>
+
+
+<h1><a class="green-text" href="https://medium.com/@camjr" target="_blank"><i class="fa fa-medium fa-1x" aria-hidden="true"></i> Les news du possible</a></h1>
+
+<!-- Blog-->
+<section class="section blog" id="blog">
+  <div class="row">
+    <div class="section-content" id="blogContent">
+      <div class="row" id="jsonContent"></div>
+    </div>
+  </div>
+</section>
+<!-- Blog-->
+
+
+
+
+
+
+<div class="row col s12 m12 l12">
+  <h1 class="center">Nos Partenaires</h1>
+  <div class="carousel valign">
+    <a class="carousel-item" href="javascript:void(0)" ng-repeat='partner in vm.partners |filter:vm.greaterThan("sortAccueil", "0") | orderBy:sortAccueil'><img ng-src="{{partner.logo}}" alt="partenaire"></a>
+  </div>
+</div>
+
+<!-- <div class="row">
+    <div class="col s12 m12 l12 center">
+        <h1 class="titreAccueil">Suivez notre communauté</h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col s12 m12 l7">
+        <div class="col s12 m12 l12">
+            <p class="pinkText center" id="titreActu">
+                ACTUALITÉS
+            </p>
+            <div id="actu">
+                <article id="actualite" ng-repeat="news in vm.newss | orderBy: '-date'">
+                    <h2 id="titreArticle">{{news.titre}}</h2>
+                    <img ng-src="{{news.image}}" id="imgArticle">
+                    <p id="textArticle">{{news.texte}}</p>
+                    <p id="dateArticle">
+                        <span ng-show="news.date">Posté le {{news.date | date:'dd/MM/yyyy'}}</span>
+                        <span ng-show="news.auteur">par {{news.auteur}}.</span>
+
+                    </p>
+                    <br>
+                    <br>
+                </article>
+            </div>
+        </div>
+
+    </div>
+    <div class="col s12 m12 l5 center">
+        <div class="row socialLogo">
+            <div class="col s4 m4 l4">
+                <a href="https://www.youtube.com/channel/UC4xKeJLSjDLDAtW1dNfwwVw" target="_blank"><img src="/assets/img/youtube.png" class="boutonSM" /></a>
+            </div>
+            <div class="col s4 m4 l4">
+                <a href="https://twitter.com/champspossible?lang=fr" target="_blank"><img src="/assets/img/twitter.png" class="boutonSM" /></a>
+            </div>
+            <div class="col s4 m4 l4">
+                <a href="https://www.facebook.com/champspossible" target="_blank"><img src="/assets/img/facebook.png" class="boutonSM" /></a>
+            </div>
+        </div>
+
+        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fchampspossible%2F%3Fref%3Dts%26fref%3Dts&tabs=timeline&width=500&height=800&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=1222472067795207"
+            width="500" height="600" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col s12 m12 l12 center">
+        <a href="!#/campus">
+            <h1 class="titreAccueil">Le Campus</h1>
+        </a>
+    </div>
+</div>
+<div class="row">
+    <div class="col s12 m12 l6">
+        <p id="texteVideo">
+            <span class="pinkText">DE LA FORMATION A L'INCUBATION</span><br><br>Le Campus "Les Champs du Possible" est le centre d'innovation et d'expérimentations agricoles.
+            <br><br>Ici, startupers, lycéens, étudiants, professionnels, agriculteurs, développeurs, spécialistes du numérique, se rencontrent et inventent, ensemble, l'agriculture du futur !
+        </p>
+    </div>
+    <div class="col s12 m12 l6">
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/CS5yzWr4sTs" frameborder="1" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col s12 m12 l6">
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/xu9smvcnD6E" frameborder="1" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="col s12 m12 l6">
+        <p id="texteVideo1">
+            <span class="pinkText">VILLAGE BY CA</span><br><br>Le Village by CA de Châteaudun, tourné vers l’agriculture numérique, facilite votre business avec une multitude de partenaires publics et privés locaux, nationaux et internationaux.
+            <br><br>Vous bénéficiez d’un vaste réseau dans lequel les startups et les grandes entreprises entrent en relation d’affaires grâce à l’interconnexion entre les Villages.
+        </p>
+    </div>
+</div>
+
+<div class="row center">
+    <div class="col s12 m12 l12">
+        <a href="!#/partenaires">
+            <h1 class="titreAccueil">Nos Partenaires / Habitants</h1>
+        </a>
+    </div>
+</div>
+ -->

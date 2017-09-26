@@ -1,0 +1,76 @@
+<ng-include src="'../views/admin/sidenav.html'"></ng-include>
+
+<div class="container">
+    <!-- Titre -->
+    <div class="row">
+        <h3 class="center-align titreAdmin">Partenaires et Habitants</h3>
+    </div>
+
+    <!-- Boutons ajout, tri, recherches -->
+    <div class="row ">
+        <button class="boutonAdmin boutonAdd left" ng-click="vm.order='-_id'; vm.create()" ; onclick="Materialize.toast('Insérez votre partenaire', 2500, 'rounded')">
+            Ajouter
+        </button>
+
+        <!-- filtre -->
+        <select ng-model="vm.query" class="browser-default col s2 m2 l2">
+            <option value="">Tous</option>
+            <option value ='Partenaire'>Partenaire</option>
+            <option value ='Habitant'>Habitant</option>
+        </select>
+        <div class="col">
+        </div>
+        <!-- Tri -->
+        <select ng-model="vm.order" class="browser-default col s2 m2 l2">
+            <option value="" disabled selected>Ordre d'affichage</option>
+            <option value="nom">Nom croissant</option>
+            <option value="-nom">Nom décroissant</option>
+            <option value="sortAccueil">Ordre croissant</option>
+            <option value="-sortAccueil">Ordre décroissant</option>
+        </select>
+    </div>
+
+    <!-- Affichage des données de la table partenaires -->
+    <div class="row col l12 offset-l2 l8 offset-l2 z-depth-6 card-panel" ng-repeat='partner in vm.partners | filter: {type:vm.query} | orderBy:vm.order'>
+        <input id="input_text" length="100" type="text" class="form-control" placeholder="Nom" ng-model='partner.nom'>
+
+        <!-- liste Partenaires -->
+        <select class="browser-default col l6 offset-3" ng-model='partner.type'>
+            <option value="" disabled selected>-Choisissez un type-</option>
+            <option value="Habitant">Habitant</option>
+            <option value="Partenaire">Partenaire</option>
+        </select>
+        <textarea type="text" class="materialize-textarea" placeholder="Description" ng-model='partner.smallDescription'></textarea>
+        <input placeholder="Lien de site" type="text" class="form-control" ng-model='partner.site'>
+        <input placeholder="Ordre d'affichage de l'élément" type="text" class="form-control" ng-model='partner.sortAccueil'>
+        <input onchange='openFile(event)' file-upload type="file" id="uploadImage-{{$index}}" accept="image/*" name='file'>
+        <br>
+        <img src="{{partner.logo}}" width="300px" name="showPict" alt="Image partenaire habitant" id='output' />
+
+        <!-- Boutons Enregistrer Supprimer-->
+        <div class="raw">
+            <button ng-click='vm.update(partner, $index)' class="col s3 m3 l3 offset-l2 center-align valign btn blue waves-effect boutonAdminNews" onclick=" Materialize.toast('Partenaire enregistré', 2500, 'rounded') ">
+                Enregistrer
+            </button>
+            <button ng-click='vm.delete(partner)' class="col col s3 m3 l3 offset-l2 center-align valign btn blue waves-effect boutonAdminNews" onclick=" Materialize.toast('Partenaire supprimé', 2500, 'rounded')">
+                Supprimer
+            </button>
+        </div>
+    </div>
+
+    <!-- script visualisation image avant enregistrement -->
+    <script type="text/javascript">
+        // affichage image
+        var openFile = function(event) {
+            var input = event.target;
+            var reader = new FileReader();
+            reader.onload = function() {
+                var output = document.getElementById('output');
+                var dataURL = reader.result;
+                output.src = dataURL;
+            };
+            reader.readAsDataURL(input.files[0]);
+        };
+    </script>
+
+</div>

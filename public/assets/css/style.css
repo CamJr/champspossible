@@ -1,0 +1,414 @@
+m.blueBackground{
+  background-color: #082135
+}
+.responsive-img{
+width: 100%
+}
+.responsive-imgMap{
+width: 50%
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.bleu-text{
+  color: #082135
+}
+
+/* NAVBAR & footer */
+
+
+
+nav, footer.page-footer{
+  background-color: #082135;
+}
+
+.navTitle {
+    background: #394D5D;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0.5% 0.5% 0.5% 0.5%;
+}
+
+
+
+/* Slider*/
+.slider {
+    max-width: 100vw;
+    max-height: 100vh;
+    height: 0%;
+}
+
+.slider img {
+    width: 100vw;
+    height: 60vh;
+}
+
+.cardStartUp{
+  border: 5px solid #002B8E;
+  padding: 10%
+}
+
+.cardCoworking{
+  border: 5px solid #F54300;
+  padding: 10%
+}
+
+.cardSlack{
+  border: 5px solid #40B892;
+}
+
+.buttonStartUp{
+background-color: #002B8E;
+color: white;
+font-size: 60px
+}
+.buttonCo{
+background-color: #F54300;
+color: white;
+font-size: 60px
+}
+
+.buttonSlack{
+background-color: #40B892;
+color: white;
+font-size: 60px
+}
+
+
+
+
+
+
+/* Page accueil */
+
+#choixProfil {
+    background-color: #082135;
+    color: white;
+    font-size: 22px;
+    margin: 1% 0% 2% 0%;
+    padding: 1% 2% 0% 2%;
+    z-index: 100!important;
+}
+
+.profilSquare {
+    margin: 3% 3% 3% 3%;
+    padding: 0;
+}
+
+.iconeChoix {
+    color: black;
+    font-size: 60px;
+    margin: 0;
+    padding: 0;
+}
+
+.lienOffre {
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.lienOffre:hover {
+    color: black;
+    font-weight: bolder;
+}
+
+.titreAccueil {
+    align-items: left;
+    background: url('../img/subtle_carbon.png');
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0 0 -1% 0;
+    padding: 1% 1% 1% 1%;
+}
+
+#titreActu {
+    font-size: 38px;
+    font-weight: bold;
+    margin-top: 1%;
+}
+
+.boutonSM {
+    height: 50px;
+    width: 50px;
+}
+
+#actualite {
+    margin: 1% 0% 1% 1%;
+    font-size: 18px;
+    line-height: 150%;
+    min-height: 250px;
+    padding: 2% 2% 2% 2%;
+    text-align: justify;
+}
+
+
+
+/*Youtube*/
+
+.ytImg{
+  width: 80%
+}
+
+/*Actualités -Social*/
+
+#actu {
+    background: white;
+    border: 2px inset #a1a1a1;
+    border-left: 0px;
+    border-right: 0px;
+    height: : 600px!important;
+    margin-top: 35px;
+    max-height: 600px;
+    overflow-y: auto!important;
+    padding: 20px;
+}
+
+.socialLogo {
+    margin-top: 15px;
+}
+
+#titreArticle {
+    color: black;
+    font-size: 29px;
+    font-weight: bold;
+    margin: 2% 2% 2% 0%;
+}
+
+#imgArticle {
+    float: left;
+    height: 250px;
+    margin: 0% 2% 1% 0%;
+    width: 250px;
+}
+
+#dateArticle {
+    color: black;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: bold;
+    margin: 2% 2% 2% 0%;
+}
+
+.responsive-video {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+#texteVideo {
+    background-color: #D9D9D9;
+    color: black;
+    font-size: 18px;
+    line-height: 150%;
+    margin: 0;
+    padding: 10% 10% 10% 10%;
+    text-align: center;
+}
+
+#texteVideo1 {
+    background-color: #D9D9D9;
+    color: black;
+    font-size: 18px;
+    line-height: 150%;
+    margin: 0;
+    padding: 10% 10% 10% 10%;
+    text-align: center;
+}
+
+.pinkText {
+    color: #E0007C;
+    font-weight: bold;
+}
+
+.carousel {
+    background-color: white;
+    height: 200px;
+}
+
+.carousel .carousel-item {
+    height: 150px!important;
+    padding-top: 40px !important;
+}
+
+.slick-list {
+    z-index: -1!important;
+}
+
+
+.listprofile {
+    margin-top: 30px;
+}
+
+
+/* Le Campus */
+
+.blocCampus, .blockText, .blockImg {
+    margin: 0;
+    padding: 0;
+}
+
+.titreCampus {
+    color: #E0007C;
+    font-size: 35px;
+    text-align: center;
+}
+
+.campus-p {
+    font-size: 18px;
+    line-height: 175%;
+    padding: 3% 10% 5% 10%;
+    text-align: justify;
+}
+
+.campus-p1 {
+    font-size: 18px;
+    line-height: 200%;
+    padding: 10% 10% 10% 10%;
+    text-align: justify;
+}
+
+
+/* Notre offre */
+
+#filtreOffre {
+    color: white;
+}
+
+.blocTri {
+    background-color: black;
+    border-top: 2px solid white;
+    font-weight: bolder;
+    margin: 0;
+    padding: 0.5% 0.5% 0.5% 0.5%;
+}
+
+.triOffre {
+    background-color: black;
+    color: white;
+}
+
+.iconeOffre {
+    color: #f8bbd0;
+    font-size: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+.materialboxed {
+    position: absolute;
+    width: 100%!important;
+}
+
+.textOffre {
+    font-size: 18px;
+    line-height: 200%;
+    text-align: justify;
+    text-indent: 3em;
+}
+
+.titreOffre {
+    color: #E0007C;
+    font-size: 28px;
+    font-weight: bolder;
+    text-align: left;
+}
+
+.imgOffre {
+    border: 4px solid black;
+    height: 150px;
+    width: 150px;
+}
+
+
+/* Partenaires et habitants */
+
+.iconeTripartners {
+    color: #E0007C;
+}
+
+.typePartner {
+    font-size-adjust: auto;
+    margin: 0;
+    padding: 0;
+}
+
+
+ /*Footer */
+/*
+footer {
+    background: url('../img/subtle_carbon.png')
+}
+
+#titreFooter {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0 0 3% 0;
+    padding: 0;
+}
+
+#ML h6 {
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+}
+
+#ML p {
+    color: grey;
+    font-size: 20px;
+    text-align: left;
+}
+
+#logowcs {
+    height: 20px;
+    width: 20px;
+}*/
+
+
+/*Medias*/
+
+@media screen and (max-width: 1200px) {
+    #logoCA {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+    #logoCDP {
+        height: 120px;
+        left: 0;
+        position: relative;
+        top: -25px;
+        width: 120px;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .iconeTripartners {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #logoCDP {
+        display: none;
+    }
+}
