@@ -56,7 +56,7 @@ function homeController(partnerService, newsService, homeService, offreService, 
 $(function () {
 	var $content = $('#jsonContent');
 	var data = {
-		rss_url: 'https://medium.com/feed/@champspossible'
+		rss_url: 'https://medium.com/feed/champspossible'
 	};
 	$.get('https://api.rss2json.com/v1/api.json', data, function (response) {
 		if (response.status == 'ok') {
@@ -68,14 +68,14 @@ $(function () {
 				 } else {
 					 visibleSm = ' visible-sm';
 				 }
-				output += '<div class="col s4' + visibleSm + '">';
+				output += '<div class="col s12 col l4' + visibleSm + '">';
 				output += '<div class="blog-post"><header>';
 				var tagIndex = item.description.indexOf('<img'); // Find where the img tag starts
 				var srcIndex = item.description.substring(tagIndex).indexOf('src=') + tagIndex; // Find where the src attribute starts
 				var srcStart = srcIndex + 5; // Find where the actual image URL starts; 5 for the length of 'src="'
 				var srcEnd = item.description.substring(srcStart).indexOf('"') + srcStart; // Find where the URL ends
 				var src = item.description.substring(srcStart, srcEnd); // Extract just the URL
-				output += '<a href="' + item.link + '"  class="blog-element"><img class="img-responsive" src="' + src + '" width="600" height="300"></a></header>';
+				output += '<a href="' + item.link + '"  class="blog-element"><img class="img-responsive" src="' + src + '" width="600" height="325"></a></header>';
 				output += '<div class="blog-content center"><h4><a href="'+ item.link + '">' + item.title + '</a></h4>';
 				var yourString = item.description.replace(/<img[^>]*>/g,""); //replace with your string.
 				var maxLength = 120 // maximum number of characters to extract
@@ -129,7 +129,7 @@ $(function () {
             var video_embed = '<div><iframe width="600" height="300" src="//www.youtube.com/embed/' + video_id + '?html5=1" frameborder="0" allowfullscreen></iframe></div>';
             var video_url = 'https://www.youtube.com/watch?v='+video_id;
             var title = $("<a style='font-size: 2.28rem;' href="+ video_url +">").append(data.items[i].snippet.title);
-            var holder = $("<div class='col s4'>").append(video_embed,title);
+            var holder = $("<div class='col s12 col l4 '>").append(video_embed,title);
             $("#youtube").append(holder);
           }
         }

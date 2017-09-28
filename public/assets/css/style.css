@@ -1,4 +1,4 @@
-m.blueBackground{
+.blueBackground{
   background-color: #082135
 }
 .responsive-img{
@@ -8,7 +8,9 @@ width: 100%
 width: 50%
 }
 
-
+.visible-sm{
+  display: none;
+}
 
 * {
     margin: 0;
@@ -40,9 +42,10 @@ nav, footer.page-footer{
 .navTitle {
     background: #394D5D;
     color: white;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: bold;
-    padding: 0.5% 0.5% 0.5% 0.5%;
+    /*padding: 0.5% 0.5% 0.5% 0.5%;*/
+    margin-top: 3px;
 }
 
 
@@ -293,7 +296,7 @@ font-size: 60px
 }
 
 .blocTri {
-    background-color: black;
+    background-color: #394D5D;
     border-top: 2px solid white;
     font-weight: bolder;
     margin: 0;
@@ -332,17 +335,11 @@ font-size: 60px
 }
 
 .imgOffre {
-    border: 4px solid black;
-    height: 150px;
-    width: 150px;
+    width: 50%;
 }
 
 
 /* Partenaires et habitants */
-
-.iconeTripartners {
-    color: #E0007C;
-}
 
 .typePartner {
     font-size-adjust: auto;

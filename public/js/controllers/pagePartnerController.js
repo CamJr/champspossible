@@ -10,15 +10,14 @@ function pagePartnerController(partnerService, $routeParams, $location, $timeout
     console.log(this.$routeParams);
     console.log(this.$routeParams.id);
 
-    this.index = this.$routeParams.id-1;
+    this.index = this.$routeParams._id;
     console.log(this.index);
 
     this.pagePartner = this.partner[this.index];
     console.log(this.pagePartner);
 
-
     this.load = () => {
-        this.partnerService.getOne().then((res) => {
+        this.partnerService.getAll().then((res) => {
             this.partners = res.data;
             $(".button-collapse").sideNav();
         });

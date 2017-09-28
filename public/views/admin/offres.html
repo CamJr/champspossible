@@ -40,13 +40,15 @@
     <div class="row col l12 offset-l2 l8 offset-l2 z-depth-6 card-panel" ng-repeat='offre in vm.offres | filter:{filtre:vm.query} | orderBy: vm.order'>
         <input type="text" class="form-control" placeholder="Titre de l'offre" ng-model='offre.titre'>
         <!-- liste des types - entreprise, startup, etudiants, experts -->
-        <select class="browser-default" placeholder="Filtre" ng-model='offre.filtre'>
-            <option value="" disabled selected>-Choix du profil-</option>
-            <option value="Entreprise">Entreprise</option>
+        <select multiple class='browser-default mutlipleOffre' placeholder="Filtre" ng-model='offre.filtre'>
+            <!-- <option value="" disabled selected>-Choix du profil-</option> -->
+            <option >Entreprise</option>
             <option value="Startup">Startup</option>
             <option value="Etudiant">Etudiant</option>
             <option value="Expert">Expert</option>
-        </select>
+      </select>
+
+
         <textarea type="text" class="materialize-textarea" placeholder="Description de l'offre" ng-model='offre.texte'></textarea>
         <input type="text" class="form-control" placeholder="Ordre d'affichage" ng-model='offre.ordre'>
         <input onchange='openFile(event)' file-upload type="file" placeholder="Image" id="uploadImage-{{$index}}" accept="image/*" name='file'>
