@@ -24,12 +24,12 @@
   <div ng-repeat='partner in vm.partners |filter:{type:vm.filter} | orderBy:nom' class="col s3 ">
     <div class="card">
       <div class="card-image">
-        <a ng-click="card(partner.id)"><img ng-src="{{partner.logo}}"></a>
+        <a ng-click="vm.card(partner._id)"><img ng-src="{{partner.logo}}"></a>
       </div>
       <div class="card-content">
         <span class="card-title">{{partner.nom}}</span>
         <p>{{partner.smallDescription}}</p>
-        <button ng-click="vm.card(partenaires._id)" type="button" name="button">bouton</button>
+        <button ng-click="vm.card(partner._id)" type="button" name="button">bouton</button>
       </div>
       <div class="card-action">
         <a ng-href="{{partner.site}}">Site officiel</a>

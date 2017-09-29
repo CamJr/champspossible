@@ -69,13 +69,13 @@ $(function () {
 					 visibleSm = ' visible-sm';
 				 }
 				output += '<div class="col s12 col l4' + visibleSm + '">';
-				output += '<div class="blog-post"><header>';
+				output += '<div class="blog-post center"><header>';
 				var tagIndex = item.description.indexOf('<img'); // Find where the img tag starts
 				var srcIndex = item.description.substring(tagIndex).indexOf('src=') + tagIndex; // Find where the src attribute starts
 				var srcStart = srcIndex + 5; // Find where the actual image URL starts; 5 for the length of 'src="'
 				var srcEnd = item.description.substring(srcStart).indexOf('"') + srcStart; // Find where the URL ends
 				var src = item.description.substring(srcStart, srcEnd); // Extract just the URL
-				output += '<a href="' + item.link + '"  class="blog-element"><img class="img-responsive" src="' + src + '" width="600" height="325"></a></header>';
+				output += '<a href="' + item.link + '"  class="blog-element"><img class="img-responsive" src="' + src + '" width="600" height="350"></a></header>';
 				output += '<div class="blog-content center"><h4><a href="'+ item.link + '">' + item.title + '</a></h4>';
 				var yourString = item.description.replace(/<img[^>]*>/g,""); //replace with your string.
 				var maxLength = 120 // maximum number of characters to extract
@@ -133,9 +133,6 @@ $(function () {
             $("#youtube").append(holder);
           }
         }
-
-
-
     });
     }
 

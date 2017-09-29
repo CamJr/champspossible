@@ -10,11 +10,9 @@ function pagePartnerController(partnerService, $routeParams, $location, $timeout
     console.log(this.$routeParams);
     console.log(this.$routeParams.id);
 
-    this.index = this.$routeParams._id;
+    this.index = this.$routeParams.id;
     console.log(this.index);
 
-    this.pagePartner = this.partner[this.index];
-    console.log(this.pagePartner);
 
     this.load = () => {
         this.partnerService.getAll().then((res) => {
@@ -25,4 +23,8 @@ function pagePartnerController(partnerService, $routeParams, $location, $timeout
 
     this.load();
     $(document).ready(function() {});
+
+    this.pagePartner = this.partner[this.index];
+    console.log(this.pagePartner);
+
 }
