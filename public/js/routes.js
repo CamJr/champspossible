@@ -10,6 +10,16 @@ const routes = ($routeProvider) => {
             controller: 'homeController',
             controllerAs: 'vm'
         })
+        .when('/presse', {
+            templateUrl: 'views/presse.html',
+            controller: 'homeController',
+            controllerAs: 'vm'
+        })
+        .when('/team', {
+            templateUrl: 'views/team.html',
+            controller: 'homeController',
+            controllerAs: 'vm'
+        })
 
         .when('/offres', {
             templateUrl: 'views/offres.html',

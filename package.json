@@ -22,6 +22,7 @@
     "mmmagic": "^0.4.5",
     "mongoose": "",
     "morgan": "",
+    "nodemon": "^1.12.1",
     "quickthumb": "0.0.12"
   },
   "devDependencies": {
