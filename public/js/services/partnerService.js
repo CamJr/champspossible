@@ -10,8 +10,8 @@ function partnerService($http) {
         return this.$http.get('/api/partners');
     };
 
-    this.getOne = (id) => {
-        return this.$http.get('/api/partners/' + id);
+    this.getOne = (index) => {
+        return this.$http.get('/api/partners/' + index);
     };
 
     this.update = (id, data) => {

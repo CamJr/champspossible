@@ -112,14 +112,14 @@ nav, footer.page-footer{
 /*CARD STARTUP*/
 
 .cardStartUp{
-  border-left: 5px solid #002B8E;
-  border-right: 5px solid #002B8E;
-  border-top: 5px solid #002B8E;
+  border-left: 5px solid #297FB8;
+  border-right: 5px solid #297FB8;
+  border-top: 5px solid #297FB8;
   padding: 10%
 }
 
 .buttonStartUp{
-  background-color: #002B8E;
+  background-color: #297FB8;
   color: white;
   font-size: 60px
 }
@@ -139,6 +139,23 @@ background-color: #F54300;
 color: white;
 font-size: 60px
 }
+
+
+/*CARD Salle*/
+
+.cardSalle{
+  border-left: 5px solid #17A086;
+  border-right: 5px solid #17A086;
+  border-top: 5px solid #17A086;
+  padding: 10%
+}
+
+.buttonSalle{
+background-color: #17A086;
+color: white;
+font-size: 60px
+}
+
 
 
 /* Page accueil */

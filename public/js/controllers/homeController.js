@@ -75,7 +75,7 @@ function homeController(partnerService, newsService, homeService, offreService, 
             var srcStart = srcIndex + 5; // Find where the actual image URL starts; 5 for the length of 'src="'
             var srcEnd = item.description.substring(srcStart).indexOf('"') + srcStart; // Find where the URL ends
             var src = item.description.substring(srcStart, srcEnd); // Extract just the URL
-            output += '<a href="' + item.link + '"  class="blog-element"><img class="responsive-img" src="' + src + '" width="600" height="200"></a></header>';
+            output += '<a href="' + item.link + '"  class="blog-element"><img class="responsive-img zoom" src="' + src + '" width="600" height="200"></a></header>';
             output += '<div class="blog-content center"><h4><a href="' + item.link + '">' + item.title + '</a></h4>';
             var yourString = item.description.replace(/<img[^>]*>/g, ""); //replace with your string.
             var maxLength = 120 // maximum number of characters to extract
