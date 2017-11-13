@@ -76,7 +76,7 @@ function homeController(partnerService, newsService, homeService, offreService, 
             var srcEnd = item.description.substring(srcStart).indexOf('"') + srcStart; // Find where the URL ends
             var src = item.description.substring(srcStart, srcEnd); // Extract just the URL
             output += '<a href="' + item.link + '"  class="blog-element"><img class="responsive-img zoom" src="' + src + '" width="600" height="200"></a></header>';
-            output += '<div class="blog-content center"><h4><a href="' + item.link + '">' + item.title + '</a></h4>';
+            output += '<div class="blog-content center"><a style="font-size: 1.5rem;" href="' + item.link + '">' + item.title + '</a>';
             var yourString = item.description.replace(/<img[^>]*>/g, ""); //replace with your string.
             var maxLength = 120 // maximum number of characters to extract
             //trim the string to the maximum length
@@ -128,7 +128,7 @@ function homeController(partnerService, newsService, homeService, offreService, 
             var video_id = data.items[i].snippet.resourceId.videoId;
             var video_embed = '<div class="video-container"><iframe width="600" height="350" src="//www.youtube.com/embed/' + video_id + '?html5=1" frameborder="0" allowfullscreen></iframe></div>';
             var video_url = 'https://www.youtube.com/watch?v=' + video_id;
-            var title = $("<a style='font-size: 2.28rem;' href=" + video_url + ">").append(data.items[i].snippet.title);
+            var title = $("<a style='font-size: 1.5rem;' href=" + video_url + ">").append(data.items[i].snippet.title);
             var holder = $("<div class='col s12 col m12 col l4 '>").append(video_embed, title);
             $("#youtube").append(holder);
           }
