@@ -10,6 +10,7 @@ const partnerSchema = new mongoose.Schema({
     tel: String,
     mail: String,
     site: String,
+    link: String,
     sortAccueil: {
         type: Number,
         default: 0,
@@ -52,6 +53,7 @@ export default class Partner {
                 tel: req.body.tel,
                 mail: req.body.mail,
                 site: req.body.site,
+                link: req.body.link,
                 sortAccueil: req.body.sortAccueil,
             },
             (err, partner) => {
@@ -76,6 +78,7 @@ export default class Partner {
             tel: req.body.tel,
             mail: req.body.mail,
             site: req.body.site,
+            link: req.body.link,
             sortAccueil: req.body.sortAccueil,
         }, (err, partner) => {
             if (err || !partner) {

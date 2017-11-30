@@ -1,5 +1,8 @@
 /*Logo*/
 
+.mouseClick{
+  cursor: pointer
+}
 
 .fa-facebook-square{
   color: #3B5998
@@ -52,9 +55,15 @@ main {
 
 /* NAVBAR & footer */
 
+#logoCDP{
+width: 27%
+}
 
+nav{
+  background-color: white;
+}
 
-nav, footer.page-footer{
+footer.page-footer{
   background-color: #082135;
 }
 
@@ -67,6 +76,21 @@ nav, footer.page-footer{
     margin-top: 3px;
 }
 
+nav ul a {
+    transition: background-color .3s;
+    font-size: 1.3em;
+    color: #000;
+    display: block;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+
+nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+    height: 150px;
+    line-height: 150px;
+}
+
 /*PARALLAX*/
 
 .parralaxTitle{
@@ -74,23 +98,10 @@ nav, footer.page-footer{
 }
 
 /* Slider*/
-.slider {
-    max-width: 100vw;
-    max-height: 100vh;
-    height: 0%;
-}
-
-.slider img {
-    width: 100vw;
-    height: 75vh;
-}
 
 
-@media screen and (max-width: 1200px) {
-  .slider img {
-      width: 100vw;
-      height: 50vh;
-  }
+.carouselSlider img {
+    width: 100%;
 }
 
 
@@ -112,14 +123,14 @@ nav, footer.page-footer{
 /*CARD STARTUP*/
 
 .cardStartUp{
-  border-left: 5px solid #297FB8;
-  border-right: 5px solid #297FB8;
-  border-top: 5px solid #297FB8;
+  border-left: 5px solid #e91e63;
+  border-right: 5px solid #e91e63;
+  border-top: 5px solid #e91e63;
   padding: 10%
 }
 
 .buttonStartUp{
-  background-color: #297FB8;
+  background-color: #e91e63;
   color: white;
   font-size: 60px
 }
@@ -128,14 +139,14 @@ nav, footer.page-footer{
 /*CARD CO WORKING*/
 
 .cardCoworking{
-  border-left: 5px solid #F54300;
-  border-right: 5px solid #F54300;
-  border-top: 5px solid #F54300;
+  border-left: 5px solid #e91e63;
+  border-right: 5px solid #e91e63;
+  border-top: 5px solid #e91e63;
   padding: 10%
 }
 
 .buttonCo{
-background-color: #F54300;
+background-color: #e91e63;
 color: white;
 font-size: 60px
 }
@@ -144,14 +155,14 @@ font-size: 60px
 /*CARD Salle*/
 
 .cardSalle{
-  border-left: 5px solid #17A086;
-  border-right: 5px solid #17A086;
-  border-top: 5px solid #17A086;
+  border-left: 5px solid #e91e63;
+  border-right: 5px solid #e91e63;
+  border-top: 5px solid #e91e63;
   padding: 10%
 }
 
 .buttonSalle{
-background-color: #17A086;
+background-color: #e91e63;
 color: white;
 font-size: 60px
 }
@@ -453,30 +464,16 @@ footer {
 
 /*Medias*/
 
-@media screen and (max-width: 1200px) {
-    #logoCA {
-        display: none;
+
+@media screen (max-width: 800px) {
+nav ul a {
+    font-size: 1em;
+}
+    .zoom {
+      transition: all 0.3s;
+    }
+    .zoom:hover {
+      transform: none;
     }
 }
-
-@media screen and (min-width: 1000px) and (max-width: 1200px) {
-    #logoCDP {
-        height: 120px;
-        left: 0;
-        position: relative;
-        top: -25px;
-        width: 120px;
-    }
-}
-
-@media screen and (max-width: 1250px) {
-    .iconeTripartners {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    #logoCDP {
-        display: none;
-    }
 }

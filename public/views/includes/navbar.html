@@ -54,12 +54,11 @@
 
 
 
-<nav ng-controller='navbarController as vm'>
+<nav class="z-depth-0" ng-controller='navbarController as vm'>
   <div class="nav-wrapper">
-    <a href="#" class="brand-logo">Campus Les Champs du Possible</a>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
-
-
+    <!-- <a href="#" class="brand-logo">Campus Les Champs du Possible</a> -->
+    <a class="navbar" href="#!/"><img class="responsive-img" src="assets/img/logo.png" id="logoCDP"/></a>
+    <ul id="nav-mobile" class="right">
       <li>
           <a href="#!/accueil" class="rubriqueNav">Accueil</a>
       </li>
@@ -71,6 +70,10 @@
       </li>
       <li>
           <a href="#!/partenaires" class="rubriqueNav">Habitants/Partenaires</a>
+      </li>
+
+      <li>
+          <a href="#!/agenda" class="rubriqueNav">Agenda</a>
       </li>
 
       <li ng-repeat="ephemere in vm.ephemeres" ng-show="ephemere.cacheEphemere">

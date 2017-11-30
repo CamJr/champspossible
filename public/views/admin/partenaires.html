@@ -40,7 +40,9 @@
             <option value="Habitant">Habitant</option>
             <option value="Partenaire">Partenaire</option>
         </select>
-        <textarea type="text" class="materialize-textarea" placeholder="Description" ng-model='partner.smallDescription'></textarea>
+        <textarea type="text" class="materialize-textarea" placeholder="Description 143 characters" ng-model='partner.smallDescription'></textarea>
+        <textarea type="text" class="materialize-textarea" placeholder="Description" ng-model='partner.bigDescription'></textarea>
+        <input placeholder="Lien Youtube" type="text" class="form-control" ng-model='partner.link'>
         <input placeholder="Lien de site" type="text" class="form-control" ng-model='partner.site'>
         <input placeholder="Ordre d'affichage de l'élément" type="text" class="form-control" ng-model='partner.sortAccueil'>
         <input onchange='openFile(event)' file-upload type="file" id="uploadImage-{{$index}}" accept="image/*" name='file'>

@@ -21,6 +21,12 @@ const routes = ($routeProvider) => {
             controllerAs: 'vm'
         })
 
+        .when('/agenda', {
+            templateUrl: 'views/agenda.html',
+            controller: 'homeController',
+            controllerAs: 'vm'
+        })
+
         .when('/offres', {
             templateUrl: 'views/offres.html',
             controller: 'offreController',
@@ -53,7 +59,7 @@ const routes = ($routeProvider) => {
         })
         .when('/admin', {
             templateUrl: 'admin/index.html',
-
+            controller: 'loginController',
         })
         .otherwise({
             redirectTo: '/'

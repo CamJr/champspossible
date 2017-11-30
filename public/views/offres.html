@@ -1,25 +1,32 @@
+<div class="center navTitle">
+VOTRE PROFIL :
+</div>
 <div class="row blocTri">
-    <div class="col s12 m12 l2 center-align $ white-text">VOTRE PROFIL :</div>
-    <div class="col s6 m4 l2 textTri center">
+    <!-- <div class="col s12 m12 l2 center-align white-text">VOTRE PROFIL :</div> -->
+    <div class="col s6 m2 l2 textTri center">
         <a class="center-align waves-effect waves-light white-text typePartner" ng-click="vm.filter = ''">
           <i class="material-icons left iconeTripartners">{{vm.filter == '' ? "check_circle" : "language"}}</i>Tous</a>
     </div>
-    <div class="col s6 m4 l2 textTri center">
-        <a class="center-align waves-effect waves-light white-text" ng-click="vm.filter = 'Startup'">
+    <div class="col s6 m2 l2 textTri center">
+        <a class="center-align waves-effect waves-light white-text typePartner" ng-click="vm.filter = 'Startup'">
             <i class="material-icons left iconeTripartners">{{vm.filter == 'Startup' ? "check_circle" : "flight_takeoff"}}</i>Startup</a>
     </div>
-    <div class="col s6 m4 l2 textTri center">
-        <a class="center-align waves-effect waves-light white-text" ng-click="vm.filter = 'Entreprise'">
-            <i class="material-icons left iconeTripartners">{{vm.filter == 'Entreprise' ? "check_circle" : "business_center"}}</i>Entreprise</a>
+    <div class="col s6 m2 l2 textTri center">
+      <a class="center-align waves-effect waves-light white-text" ng-click="vm.filter = 'Projet';">
+        <i class="material-icons left iconeTripartners">{{vm.filter == 'Projet' ? "check_circle" : "school"}}</i>Porteur de Projet</a>
+      </div>
+    <div class="col s6 m2 l2 textTri center">
+        <a class="center-align waves-effect waves-light white-text" ng-click="vm.filter = 'agriculteur'">
+            <i class="material-icons left iconeTripartners">{{vm.filter == 'agriculteur' ? "check_circle" : "business_center"}}</i>Agriculteur</a>
     </div>
-    <div class="col s6 m4 l2 textTri center">
+    <div class="col s6 m2 l2 textTri center">
         <a class="center-align waves-effect waves-light white-text" ng-click="vm.filter = 'Expert'">
             <i class="material-icons left iconeTripartners">{{vm.filter == 'Expert' ? "check_circle" : "face"}}</i>Expert</a>
     </div>
-    <div class="col s6 m4 l2 textTri center">
-        <a class="center-align waves-effect waves-light white-text" ng-click="vm.filter = 'Etudiant';">
-            <i class="material-icons left iconeTripartners">{{vm.filter == 'Etudiant' ? "check_circle" : "school"}}</i>Étudiant</a>
-    </div>
+    <div class="col s6 m2 l2 textTri center">
+      <a class="center-align waves-effect waves-light white-text" ng-click="vm.filter = 'Etudiant';">
+        <i class="material-icons left iconeTripartners">{{vm.filter == 'Etudiant' ? "check_circle" : "school"}}</i>Etudiant</a>
+      </div>
 </div>
 <br>
 <div class="row valign-wrapper" ng-repeat='offre in vm.offres | filter: {filtre: vm.filter} | orderBy:ordre|filter:vm.greaterThan("ordre", "0")'>

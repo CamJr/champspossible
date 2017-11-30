@@ -32,7 +32,7 @@ function homeController(partnerService, newsService, homeService, offreService, 
       $timeout(() => {
         function autoplay() {
           $('.carousel').carousel('next');
-          setTimeout(autoplay, 4500);
+          setTimeout(autoplay, 5000);
         }
         $('.carousel').carousel({
           dist: 0,
@@ -56,7 +56,7 @@ function homeController(partnerService, newsService, homeService, offreService, 
     $(function() {
       var $content = $('#jsonContent');
       var data = {
-        rss_url: 'https://medium.com/feed/champspossible'
+        rss_url: 'https://medium.com/feed/champspossible//tagged/news'
       };
       $.get('https://api.rss2json.com/v1/api.json', data, function(response) {
         if (response.status == 'ok') {
