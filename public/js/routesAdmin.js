@@ -2,9 +2,9 @@ const routes = ($routeProvider, $httpProvider) => {
     $routeProvider
         .when('/', {
             templateUrl: '../views/admin/main.html',
-            // resolve: {
-            //     connected: checkIsConnected
-            // }
+            resolve: {
+                connected: checkIsConnected
+            }
         })
         .when('/login', {
             templateUrl: '../views/admin/login.html',
@@ -15,49 +15,49 @@ const routes = ($routeProvider, $httpProvider) => {
             templateUrl: '../views/admin/accueil.html',
             controller: 'homeController',
             controllerAs: 'vm',
-            // resolve: {
-            //     connected: checkIsConnected
-            // }
+            resolve: {
+                connected: checkIsConnected
+            }
         })
         .when('/offres', {
             templateUrl: '../views/admin/offres.html',
             controller: 'offreController',
             controllerAs: 'vm',
-            // resolve: {
-            //     connected: checkIsConnected
-            // }
+            resolve: {
+                connected: checkIsConnected
+            }
         })
         .when('/partenaires', {
             templateUrl: '../views/admin/partenaires.html',
             controller: 'partnerController',
             controllerAs: 'vm',
-            // resolve: {
-            //     connected: checkIsConnected
-            // }
+            resolve: {
+                connected: checkIsConnected
+            }
         })
         .when('/news', {
             templateUrl: '../views/admin/news.html',
             controller: 'newsController',
             controllerAs: 'vm',
-            // resolve: {
-            //     connected: checkIsConnected
-            // }
+            resolve: {
+                connected: checkIsConnected
+            }
         })
         .when('/price', {
             templateUrl: '../views/admin/price.html',
             controller: 'priceController',
             controllerAs: 'vm',
-            // resolve: {
-            //     connected: checkIsConnected
-            // }
+            resolve: {
+                connected: checkIsConnected
+            }
         })
         .when('/ephemere', {
             templateUrl: '../views/admin/ephemere.html',
             controller: 'ephemereController',
             controllerAs: 'vm',
-            // resolve: {
-            //     connected: checkIsConnected
-            // }
+            resolve: {
+                connected: checkIsConnected
+            }
         })
         .otherwise({
             redirectTo: '/'
